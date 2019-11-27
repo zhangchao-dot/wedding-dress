@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>天长地久会员注册</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+		<link rel="stylesheet" href="css/register.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/qs.min.js"></script>
+</head>
+<body>
+    <div id="top1">
+    <div class="top">
+        <a href=""><img src="images/brand_03.png" alt=""></a>
+        <span>会员注册</span>
+    </div>
+        </div>
+    <div id="d1">
+		<table></table>
+		<div>
+            
+			<table>
+			<tr>
+				<td align="center"><h2>新用户注册</h2></td>
+				<td align="right"><a href="login.html">直接登录</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="size" align="center">用户名:</td>
+				<td width=300px><input type="text" name="uname" id='uname'placeholder='请输入用户名' class='uname'></td>
+				<td width=230px><span class="vali_info">10个以内的字符、数字</span></td>
+			</tr>
+			<tr>
+				<td class="size" align="center">登录密码:</td>
+				<td><input type="password" name="upwd" id='upwd'placeholder='请输入密码' class='upwd'></td>
+				<td><span class="vali_info">6位数字</span></td>
+			</tr>
+			<tr>
+				<td class="size" align="center">确认密码:</td>
+				<td><input type="password" name="cpwd" id='cpwd'placeholder='请确认密码' class='ucwd'></td>
+				<td><span class="vali_info">必须与登录密码一致</span></td>
+			</tr>
+			<tr>
+				<td class="size" align="center">邮箱:</td>
+				<td><input type="text" name="email" id='email'placeholder='请输入邮箱' class='email'></td>
+				<td><span class="vali_info">请输入正确的邮箱格式</span></td>
+			</tr>
+			<tr>
+				<td class="size" align="center">手机号:</td>
+				<td><input type="text" name="iphone" id='iphone'placeholder='请输入手机号' class='phone'></td>
+				<td><span class="vali_info">请输入正确的手机号</span></td>
+			</tr>
+			<tr>
+				<td colspan='3'><button onclick="showXML()">提交注册信息</button></td>
+			</tr>
+            </table>
+        </div>
+        <script>
+					var txtuname=document.getElementsByName("uname")[0];
+                    var txtupwd=document.getElementsByName("upwd")[0];
+                    var txtcpwd=document.getElementsByName("cpwd")[0];
+                    var txtemail=document.getElementsByName("email")[0];
+                    var txtiphone=document.getElementsByName("iphone")[0];
+                    txtuname.onfocus=
+                    txtupwd.onfocus=
+                    txtcpwd.onfocus=
+                    txtemail.onfocus=
+                    txtiphone.onfocus=function(){
+                        var txt=this;
+                        var div=txt.parentNode.nextElementSibling.children[0];
+                        div.className="";
+                    }
+                    function vali(txt,reg){
+                    //用reg验证文本框的内容
+                    var bool=reg.test(txt.value);
+                    //先查找当前文本框旁边的div
+                    var div=txt.parentNode //当前td
+                                        .nextElementSibling //下一个td
+                                        .children[0];//div
+                    //如果验证通过
+                    if(bool){
+                        //就修改旁边div的className为vali_success
+                        div.className="vali_success";
+                    }else{//否则(如果验证没通过)
+                        //就修改旁边div的className为vali_fail
+                        div.className="vali_fail";
+                    }
+                }
+                    txtuname.onblur=function(){
+                        var reg=new RegExp(/^\w{1,10}$/);
+                        vali(this,reg);
+                    }
+                    txtupwd.onblur=function(){
+                        var reg=new RegExp(/^\d{6}$/);
+                        vali(this,reg);
+                    }
+                    txtcpwd.onblur=function(){
+                        var reg=new RegExp(/^\d{6}$/);
+                        vali(this,reg);
+                    }
+                    txtemail.onblur=function(){
+                        var reg=new RegExp(/^[a-zA-Z0-9]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/g);
+                        vali(this,reg);
+                    }
+                    txtiphone.onblur=function(){
+                        var reg=new RegExp(/^\d{11}$/g);
+                        vali(this,reg);
+                    }
+                function showXML(){
+                    var $uname=uname.value;
+                    var $upwd=upwd.value;
+                    var $cpwd=cpwd.value;
+                    var $email=email.value;
+                    var $iphone=iphone.value;
+                  
+             //axios发送请求 
+            axios.defaults.baseURL="http://127.0.0.1:5050";      
+            axios.post('/register/reg',
+                Qs.stringify({
+                        uname:$uname,
+                        upwd:$upwd,
+                        cpwd:$cpwd,
+                        email:$email,
+                        iphone:$iphone
+                })
+            //"uname="+$uname+"&upwd="+$upwd+"&cpwd="+$cpwd+"&email="+$email+"&iphone="+$iphone
+            ).then(function(result){
+                console.log(result)
+                alert("注册成功");
+            }).catch(function(error){
+                console.log(error);
+            })
+        }         
+        // function showXML(){
+        //     var $uname=uname.value;
+        //     var $upwd=upwd.value;
+        //     var $cpwd=cpwd.value;
+        //     var $email=email.value;
+        //     var $iphone=iphone.value;
+        
+		// 	//1.创建异步对象
+		// 	var xhr=new XMLHttpRequest();
+		// 	//4.绑定监听，接收响应
+		// 	xhr.onreadystatechange=function(){
+		// 		if(xhr.readyState==4&&xhr.status==200){
+        //             var result=xhr.responseText;
+        //             alert("注册成功");	
+		// 		}
+		// 	}
+		// 	//2.创建请求
+		// 	xhr.open("post","/register/reg",true);
+		// 	//3.发送请求
+        //     xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		// 	//创建请求主体
+        //     var formdata="uname="+$uname+"&upwd="+$upwd+"&cpwd="+$cpwd+"&email="+$email+"&iphone="+$iphone;
+        //     console.log(formdata);
+		// 	xhr.send(formdata);
+            
+        // }
+        </script>
+	</div>
+	<div id='qixiapp'>
+            <div class='qixiapp-box'>
+                <div class='qixiapp-box1'>
+                        <!-- 第一个盒子 -->
+                        <div class='box1'>
+                            <img src="images/brand_03.png" alt="">
+                        <div class='gs'>
+                            <p class='p1'>深圳市天长地久文化产业股份有限公司</p>
+                            <p class='p2'>SHENZHEN FOREVER CULTURAL INDUSTRY CO., LTD</p>
+                        </div>
+                        </div>
+                        <!-- 第二个盒子 -->
+                        <div class='box2'>
+                            <div class='tit'>友情链接</div>
+                            <div class='ctn'>
+                                <a href="">华人婚庆服务集团</a>
+                                <a href="">广州天长地久婚纱摄影</a>
+                                <a href="">ODOP影像产品制作</a>
+                                <a href="">七彩玫瑰</a>
+                                <a href="">上海巴黎婚纱</a>
+                                <a href="">上海米兰婚纱</a>
+                                <a href="">北京施华洛</a>
+                                <a href="">杭州佳丽</a>
+                                <a href="">长沙法缇</a>
+                                <a href="">台湾旅拍</a>
+                                <a href="">薇薇新娘</a>
+                                <a href="">芊翔西服</a>
+                            </div>
+                        </div>	
+                </div>
+                <div class='qixiapp-box2'>
+                    <div class='box1'>
+                            <p class='pb'>旗下品牌</p>
+                            <p class='pm'>BRAND</p>
+                            <p class='ps'>LIST</p>
+                    </div>
+                    <div class='box2'>
+                            <p>婚礼一站式</p>
+                            <img src="images/brand_06.png" alt="">
+                    </div>
+                    <div class='box2'>
+                            <p>儿童摄影</p>
+                            <img src="images/brand_08.png" alt="">
+                    </div>
+                    <div class='box2'>
+                            <p>儿童小王国</p>
+                            <img src="images/brand_10.png" alt="">
+                    </div>
+                    <div class='box2'>
+                            <p>儿童小王国</p>
+                            <img src="images/brand_13.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-ba-warp'>
+                <div class='footer-ba'>
+                <a href="#"><img src="images/brand_03.png" alt=""></a>
+                <p>总部地址：罗湖区泥岗路大华大厦701、702、730</p>
+                <p>Copyright © 2006 - 2019 Szforever Inc. All Rights Reserved</p>
+                <p>深圳市天长地久文化产业股份有限公司版权所有|站点备案信息： [粤ICP备09017461号]</p>
+                <p>样片与客片版权归深圳市天长地久文化产业股份有限公司所有，未经允许不得转载抄袭，我司对此保留法律诉讼的权利。</p>
+                </div>
+        </div>	
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/login.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/qs.min.js"></script>
+    <script src="js/vue.js"></script>
+    
+</head>
+<body>
+    <div class="waiceng">
+    <div class="login">
+        <table></table>
+        <div class="login_main">
+            <p>会员登录</p>
+            <ul>
+                <li>
+                    <span>用户账号</span>
+                    <a href="">还没有账号？<span>5秒注册</span></a>
+                    
+                </li>
+                <li>
+                    <input type="text" name="uname" id="uname" placeholder="请输入用户名/手机号/邮箱">
+                </li>
+                <li>
+                        <span>登录密码</span>
+                        <a href="">忘记密码</a>
+                        
+                </li>
+                <li>
+                    <input type="password" name="upwd" id="upwd" placeholder="请输入登录密码">
+                </li>
+                <li>
+                   <button onclick="login()">登录</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script>
+        // function login(){
+        //     var $uname=uname.value;
+        //     var $upwd=upwd.value;
+		// 	//1.创建异步对象
+		// 	var xhr=new XMLHttpRequest();
+		// 	//4.绑定监听，接收响应
+		// 	xhr.onreadystatechange=function(){
+		// 		if(xhr.readyState==4&&xhr.status==200){
+        //             var result=xhr.responseText;
+        //             alert("登录成功");	
+		// 		}
+		// 	}
+		// 	//2.创建请求
+		// 	xhr.open("post","/login/login",true);
+		// 	//3.发送请求
+        //     xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		// 	//创建请求主体
+        //     var formdata="uname="+$uname+"&upwd="+$upwd;
+        //     console.log(formdata);
+		// 	xhr.send(formdata);
+            
+        // }
+        function login(){
+            var $uname=uname.value;
+            var $upwd=upwd.value;
+            axios.defaults.baseURL="http://127.0.0.1:5050";      
+            axios.post('/login/login',
+                Qs.stringify({
+                        uname:$uname,
+                        upwd:$upwd
+                })
+               // "uname="+$uname+"&upwd="+$upwd
+            ).then(function(result){
+                console.log(result)
+                alert("登录成功");
+                result.$router.push("/index.html");
+            }).catch(function(error){
+                console.log(error);
+            })
+        }         
+
+    </script>
+    <div id='qixiapp'>
+            <div class='qixiapp-box'>
+                <div class='qixiapp-box1'>
+                        <!-- 第一个盒子 -->
+                        <div class='box1'>
+                            <img src="images/brand_03.png" alt="">
+                        <div class='gs'>
+                            <p class='p1'>深圳市天长地久文化产业股份有限公司</p>
+                            <p class='p2'>SHENZHEN FOREVER CULTURAL INDUSTRY CO., LTD</p>
+                        </div>
+                        </div>
+                        <!-- 第二个盒子 -->
+                        <div class='box2'>
+                            <div class='tit'>友情链接</div>
+                            <div class='ctn'>
+                                <a href="">华人婚庆服务集团</a>
+                                <a href="">广州天长地久婚纱摄影</a>
+                                <a href="">ODOP影像产品制作</a>
+                                <a href="">七彩玫瑰</a>
+                                <a href="">上海巴黎婚纱</a>
+                                <a href="">上海米兰婚纱</a>
+                                <a href="">北京施华洛</a>
+                                <a href="">杭州佳丽</a>
+                                <a href="">长沙法缇</a>
+                                <a href="">台湾旅拍</a>
+                                <a href="">薇薇新娘</a>
+                                <a href="">芊翔西服</a>
+                            </div>
+                        </div>	
+                </div>
+                <div class='qixiapp-box2'>
+                    <div class='box1'>
+                            <p class='pb'>旗下品牌</p>
+                            <p class='pm'>BRAND</p>
+                            <p class='ps'>LIST</p>
+                    </div>
+                    <div class='box2'>
+                            <p>婚礼一站式</p>
+                            <img src="images/brand_06.png" alt="">
+                    </div>
+                    <div class='box2'>
+                            <p>儿童摄影</p>
+                            <img src="images/brand_08.png" alt="">
+                    </div>
+                    <div class='box2'>
+                            <p>儿童小王国</p>
+                            <img src="images/brand_10.png" alt="">
+                    </div>
+                    <div class='box2'>
+                            <p>儿童小王国</p>
+                            <img src="images/brand_13.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-ba-warp'>
+                <div class='footer-ba'>
+                <a href="#"><img src="images/brand_03.png" alt=""></a>
+                <p>总部地址：罗湖区泥岗路大华大厦701、702、730</p>
+                <p>Copyright © 2006 - 2019 Szforever Inc. All Rights Reserved</p>
+                <p>深圳市天长地久文化产业股份有限公司版权所有|站点备案信息： [粤ICP备09017461号]</p>
+                <p>样片与客片版权归深圳市天长地久文化产业股份有限公司所有，未经允许不得转载抄袭，我司对此保留法律诉讼的权利。</p>
+                </div>
+        </div>	
+</body>
+</html>

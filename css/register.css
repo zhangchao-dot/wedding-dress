@@ -1,0 +1,233 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+    #top1{
+        width:100%;
+        height:103px;
+        background-image:url(../images/titbg.jpg);
+    }
+    .top{
+        width:100%;
+        height:53px;
+        margin-left:400px;
+        margin-bottom:30px;
+        padding-top:20px;
+    }
+    .top>span{
+        color: #4f4d4e;
+        font-size: 24px;
+        vertical-align: baseline;
+        position: relative;
+        top: 9px;
+        left: 10px;
+    }
+    #d1{
+        width:100%;
+        height:560px;
+        margin:0 auto;
+        background-image:url(../images/9S05.jpg);
+        box-sizing:border-box;
+    }
+    #d1>div{
+        width:700px;
+        height:435px;
+        background-color:rgba(0,0,0,0.5);
+        margin-top:50px;
+        margin-left:1000px;
+        box-sizing:border-box;
+    }
+#d1>div>table{
+    width:100%;
+    }
+    #d1>div>table h2{
+        font-size:20px;
+        color:#fff;
+        margin:12px 0;
+    }
+    #d1>div>table a{
+        color:#fff;
+        font-size:15px;
+        text-decoration:none;
+    }
+    #d1>div>table span{
+        color:#fff;
+        margin-left:15px;
+    }
+    .size{
+        color:#fff;
+        font-size:18px;
+    }
+    .uname,.upwd,.ucwd,.email,.phone{
+        width:100%;
+        height:40px;
+        border-radius:2px;
+        background-color:#fff;
+        background-repeat:no-repeat;
+        background-position:97% center;
+        margin:12px;
+        padding-left:15px;
+        box-sizing:border-box;
+    
+    }
+    #d1>div>table button{
+    width:69%;
+    height:40px;
+    background-color:#15a7f0;
+    border:0px;outline:0px;
+    border-radius:3px;
+    color:#fff;
+    font-size:16px;
+    background-image:linear-gradient(to bottom,#f3997f 0%,#15a7f0 100%);
+    box-sizing:border-box;
+    }
+    
+    #qixiapp{
+		width:100%;
+		overflow:hidden;
+		background-color:#3e3a39;
+	}
+	#qixiapp>.qixiapp-box{
+		overflow:hidden;
+		padding:60px 80px;
+		color:#c6b5a6;
+	}
+	.qixiapp-box1{
+		float: left;
+		width: 600px;
+	}
+	.qixiapp-box1>.box1{
+		float: left;
+		padding-bottom:20px;
+		border-bottom:1px solid #c6b5a6;
+	}
+	.box1>.gs{
+		float: right;
+		margin-left:50px;
+	}
+	.gs>.p1{
+		font-size:18px;
+		margin-bottom:0px;
+	}
+	.gs>.p2{
+		font-size:12px;
+		margin-bottom:0px;
+	}
+	.qixiapp-box1>.box1:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	.qixiapp-box1>.box2{
+		float:left;
+		margin-top:20px;
+		overflow:hidden;
+		width:100%;
+		z-index:1000;
+	}
+	.box2>.tit{
+		display: block;
+		float: left;
+		width: 90px;
+		font-size: 16px;
+		overflow: hidden;
+		height: 70px;
+		border-right: 1px solid #2d2928;
+	}
+	.box2>.ctn{
+		margin-top:5px;
+		float: left;
+		width: 490px;
+		padding-left: 10px;
+		height: 90px;
+		border-left: 1px solid #534f4d;
+		line-height: 10px;
+	}
+	.box2>.ctn a{
+		padding: 0 10px;
+		border-right: 1px solid #c6b5a6;
+		display: inline-block;
+		margin-bottom: 15px;
+		color: #c6b5a6;
+	}
+	.qixiapp-box2{
+		float: left;
+		margin-left: 50px;
+		color: #c6b5a6;
+	}
+	.qixiapp-box2>.box1{
+		float: left;
+		height: 150px;
+		margin-left: 20px;
+		padding-right: 20px;
+		border-right: 1px solid #2d2928;
+	}
+	.qixiapp-box2>.box1>.pb{
+		font-size: 36px;
+		line-height: 44px;
+	}
+	.qixiapp-box2>.box1>.pm{
+		font-size: 16px;
+		line-height: 14px;
+	}
+	.qixiapp-box2>.box1>.ps{
+		font-weight: normal;
+		font-size: 10px;
+	}
+	.qixiapp-box2>.box2{
+		height: 150px;
+		float: left;
+		margin-right: 20px;
+		padding-left: 20px;
+		border-left: 1px solid #534f4d;
+	}
+	.qixiapp-box2>.box2 p{
+		text-align:center;
+	}
+	.footer-ba-warp{
+		width:100%;
+		background-color:#2b2827;
+		overflow: hidden;
+		font-size: 12px;
+		color: #c6b5a6;
+	}
+	.footer-ba{
+		padding: 30px 80px 60px;
+		font-weight: normal;
+	}
+	.footer-ba a{
+		margin-top:15px;
+		display:block;
+		margin-bottom:15px;
+	}
+/*	表单验证*/
+.vali_info{
+	display:none;
+}
+.txt_focus{
+	border-top:2px solid black;
+	border-left:2px solid black;
+}
+
+.vali_success,.vali_fail{
+	background-repeat:no-repeat;
+  background-position:left center;
+	display:block;
+}
+
+.vali_success{
+	background-image:url("../images/ok.png");
+	background-size:cover;
+	padding-left:20px;
+	width:20px;height:20px;
+	overflow:hidden;
+}
+
+.vali_fail{
+    background-image:url("../images/err.png");
+    border:1px solid red;
+    /* background-color:#ddd; */
+    color:Red;
+	padding-left:30px;
+	font-size:16px;
+}

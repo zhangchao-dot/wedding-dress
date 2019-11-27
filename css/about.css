@@ -1,0 +1,111 @@
+#phone{
+	font-size: 26px;
+	padding-left:50px;
+	margin:15px 0;
+	cursor:pointer;
+	color:#f00;
+	}
+#menu{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    border-top:3px solid red;
+}
+#menu>.nav{
+    width:76%;
+    list-style:none;
+}
+.nav li{
+    height:146px;
+}
+.nav li a{
+    text-decoration:none;
+    color:#212529;
+    font-size:18px;
+    padding:0 40px;
+    line-height:140px;
+}
+.nav li:not(:nth-child(5)):hover{
+    background-color:#ff6f61;
+    color:#fff;
+}
+#menu>#logo{
+    list-style:none;
+}
+.yuanchuang{
+    width:100%;
+    height:200px;
+    background: url("../images/titbg02.jpg")
+}
+.yuanchuang1 h1{
+    text-align: center;
+    color:rgb(221, 217, 217);
+    padding-top:60px;
+}
+.yuanchuang1 p{
+    text-align: center;
+}
+
+.footer-warp{
+    width: 100%;
+    overflow: hidden;
+    background-color: #302d2c;
+}
+.footer-warp>.footer{
+    padding: 60px 80px 50px 80px;
+    overflow: hidden;
+    position: relative;
+    min-width: 1800px;
+}
+.footer>.title{
+    color: #c6b5a6;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+.ctn ul{
+    display: block;
+    float: left;
+    overflow: hidden;
+    width: 180px;
+    margin-right: 20px;
+}
+.ctn ul li{
+    display: block;
+    margin: 10px 0;
+    padding: 7px 0;
+    border-bottom: 1px solid #423e3b;
+    font-weight: normal;
+}
+.ctn ul li a{
+    text-decoration:none;
+    color:#c6b5a6;
+}
+#mendian{
+    display: inline-block;
+    font-size:17px;
+    color:#fff;
+    padding:23px 35px;
+    border-radius:20px;
+    background-color: #fe0000;
+    margin-top:-8px;
+    margin-left:2px;
+}
+#mendian:hover{
+    background-color:#FF6F61;
+}
+.footer-ba-warp{
+    width:100%;
+    background-color:#2b2827;
+    overflow: hidden;
+    font-size: 12px;
+    color: #c6b5a6;
+}
+.footer-ba{
+    padding: 30px 80px 60px;
+    font-weight: normal;
+}
+.footer-ba a{
+    margin-top:15px;
+    display:block;
+    margin-bottom:15px;
+}

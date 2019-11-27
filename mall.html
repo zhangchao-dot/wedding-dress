@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize_zh.css">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/mall.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+    .carousel-control-prev,
+        .carousel-control-next{
+            width:5%;height:20%;
+            background-color:rgba(0,0,0,0.1);
+            border-radius: 5px;
+            top:40%;
+        }
+        .carousel-indicators li{
+            width: 0.8rem;height:0.8rem;
+            background-color:#fff;
+            margin-left:0.375rem;
+            margin-right:0.375rem;
+            border-radius: 50%;
+        }
+        .carousel-indicators .active{
+            background-color: #0aa1ed;
+        }
+    </style>
+</head>
+<body background-color="#ccc">
+    <div class="title">
+        <div class="title-1">
+            <ul>
+                <li><img src="./images/title.png" alt="" style="width:170px;height:54px;"></li>
+                <li>
+                    <a href="">首页</a>
+                    <p><img src="./images/nav1.jpg" alt=""></p>
+                </li>
+                <li>
+                    <a href="ware.html">特别推荐</a>
+                    <p><img src="./images/nav2.jpg" alt=""></p>
+                </li>
+                <li>
+                    <a href="">本地拍</a>
+                    <p><img src="./images/nav3.jpg" alt=""></p>
+                </li>
+                <li>
+                    <a href="">全国拍</a>
+                    <p><img src="./images/nav4.jpg" alt=""></p>
+                </li>
+                <li>
+                    <a href="">全球拍</a>
+                    <p><img src="./images/nav5.jpg" alt=""></p>
+                </li>
+                <li>
+                    <a href="">蜜月旅游</a>
+                    <p><img src="./images/nav6.jpg" alt=""></p>
+                </li>
+                <li>
+                    <a href="show.html">客片展示</a>
+                    <p><img src="./images/nav7.jpg" alt=""></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="lunbo">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+                <!--1.轮播的图片-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active"><img class="w-100" src="images/415523879523621.jpg" alt=""/></div>
+                    <div class="carousel-item"><img class="w-100" src="images/415662645226378.jpg" alt=""/></div>
+                    <div class="carousel-item"><img class="w-100" src="images/水城.jpg" alt=""/></div>
+                    <div class="carousel-item"><img class="w-100" src="images/P02 (1).jpg" style="height:700px;" alt=""/></div>
+                    <div class="carousel-item"><img class="w-100" src="images/P01.jpg" style="height:700px;" alt=""/></div>
+                </div>
+                <!--2.左右箭头-->
+                <a href="#demo" class="carousel-control-prev" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a href="#demo" class="carousel-control-next"data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                <!--3.轮播指示器-->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1" class=""></li>
+                    <li data-target="#demo" data-slide-to="2" class=""></li>
+                    <li data-target="#demo" data-slide-to="3" class=""></li>
+                    <li data-target="#demo" data-slide-to="4" class=""></li>
+                </ul>
+            </div>
+    </div>
+    <div class="seek">
+        <div class="seek-1">
+        <p><input type="text" placeholder="搜索你想要的目的地/行程......"><button>搜索</button></p>
+        <p>目的地:&nbsp;布拉格&nbsp;巴黎&nbsp;悉尼&nbsp;桂林&nbsp;普吉岛&nbsp;青岛&nbsp;大连&nbsp;巴厘岛&nbsp;马尔代夫&nbsp;皇后镇&nbsp;奥克兰&nbsp;意大利&nbsp;圣托里尼</p>
+        </div>
+    </div>
+    <div class="exhibition ">
+        <div class="exhibition-1">
+            <div class="yincang1">
+            <img src="./images/D1F8293D7D454F518738C20BE6B55210_1521456389171.jpg" alt="特别推荐">
+           </div>
+           <div class="yincang2">
+            <img src="./images/68945867C8314DD385F16068094D35F4_1521456445190.jpg" alt="客片展示"></div>
+        
+            <div class="img1"> 
+                <img src="./images/4B69197C88A54F178919C7F1B4A6C7D8_1521455054626.png" alt="">
+            </div>
+            <div class="img2">
+                <img src="./images/21CBF6A27E0147178765FE385F1CBDCF_1521455197873.png" alt="">
+            </div>
+        </div>
+        <div class="exhibition-2">
+                <div class="yincang3">
+            <img src="./images/B2DF52B906A74049B0876E59713A2976_1521456475592.jpg" alt="本地拍"></div>
+            <div class="img3">
+                <img src="./images/FF53CB7C81DF43ED990D038F9FB089A4_1521455353133.png" alt="">
+            </div>
+            <div class="yincang4">
+            <img src="./images/EE57C41A37C246DDB7397B5A62E85C8E_1521456475630.jpg" alt="全国拍"></div>
+            <div class="img4">
+                <img src="./images/85E74516EC284DBBA5719C4D47BEE0E6_1521455479594.png" alt="">
+            </div>
+            <div class="yincang5">
+            <img src="./images/B70E0E1F3AA247FBA6C2689A316AA88A_1521456475622.jpg" alt="全球拍"></div>
+            <div class="img5">
+                <img src="./images/B9C72C6B3FC84777B2A86D066853C298_1521455512793.png" alt="">
+            </div>
+            <div class="yincang6">
+            <img src="./images/474B676315B64C15947061BE62D6C4CB_1521456475648.jpg" alt="蜜月旅游"></div>
+            <div class="img6">
+                <img src="./images/39D48563E4E2484FBEAA98B2F7099E2B_1521455573285.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="global">
+        <img src="./images/title_img1.jpg" alt="">
+        <span>全球100+目的地</span>
+    </div>
+    <div class="place">
+        <ul>
+            <li>
+                <h3>热门:</h3>
+                <span>
+                    <a href="">布拉格</a>
+                    <a href="">巴黎</a>
+                    <a href="">悉尼</a>
+                    <a href="">桂林</a>
+                    <a href="">普吉岛</a>
+                    <a href="">青岛</a>
+                    <a href="">大连</a>
+                    <a href="">巴厘岛</a>
+                    <a href="">马尔代夫</a>
+                    <a href="">皇后镇</a>
+                    <a href="">奥克兰</a>
+                    <a href="">意大利</a>
+                    <a href="">圣托里尼</a>
+                </span>
+            </li>
+            <li>
+                <h3>国内:</h3> 
+                <span>
+                    <a href="">大连</a>
+                    <a href="">上海</a>
+                    <a href="">厦门</a>
+                    <a href="">青岛</a>
+                    <a href="">深圳</a>
+                    <a href="">桂林</a>
+                    <a href="">三亚</a>
+                    <a href="">丽江</a>
+                    <a href="">大理白族自治州</a>
+                    <a href="">大理</a>
+                    <a href="">西藏自治区</a>
+                    <a href="">澳门特别行政区</a>
+                </span>
+            </li>
+            <li>
+                <h3>亚洲:</h3> 
+                <span>
+                    <a href="">马尔代夫</a>
+                    <a href="">土耳其</a>
+                    <a href="">越南</a>
+                    <a href="">巴厘岛</a>
+                    <a href="">北海道</a>
+                    <a href="">京都</a>
+                    <a href="">奈良</a>
+                    <a href="">东京</a>
+                    <a href="">沙巴</a>
+                    <a href="">佳乐</a>
+                    <a href="">普吉岛</a>
+                    <a href="">伊斯坦布尔</a>
+                    <a href="">槟城</a>
+                    <a href="">苏梅岛</a>
+                    <a href="">兰卡威</a>
+                </span>
+            </li>
+            <li>
+                <h3>欧洲:</h3> 
+                <span>
+                    <a href="">意大利</a>
+                    <a href="">维也纳</a>
+                    <a href="">巴黎</a>
+                    <a href="">科隆</a>
+                    <a href="">布达佩斯</a>
+                    <a href="">佛罗伦萨</a>
+                    <a href="">米兰</a>
+                    <a href="">罗马</a>
+                    <a href="">阿姆斯特丹</a>
+                    <a href="">巴塞罗那</a>
+                    <a href="">马德里</a>
+                    <a href="">苏黎世</a>
+                    <a href="">威尼斯</a>
+                    <a href="">圣托里尼</a>
+                </span>
+            </li>
+            <li>
+                <h3>大洋洲:</h3> 
+                <span>
+                    <a href="">奥克兰</a>
+                    <a href="">悉尼</a>
+                    <a href="">墨尔本</a>
+                    <a href="">基督城</a>
+                    <a href="">塞班岛</a>
+                    <a href="">皇后镇</a>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class="globa2">
+        <img src="./images/title_img3.jpg" alt="">
+        <span>本&nbsp;地&nbsp;拍</span>
+    </div>
+    <div class="local">
+        <div class="local-1">
+        <ul>
+            <li>
+                <div>
+                <img src="./images/mp46135385_1449122435926_6_th_fv23.jpeg" alt="">
+                </div>
+               <p>深圳婚纱照拍摄特惠套餐-倾心之旅</p> 
+            </li>
+            <li>
+                <div>
+                <img src="./images/580999352daea.jpg" alt="">
+                </div>
+                <p>深圳婚纱照拍摄特惠套餐-甜蜜味道</p> 
+            </li>
+            <li>
+                <div>
+                <img src="./images/u=2558184580,2865001023&fm=26&gp=0.jpg" alt="">
+                </div>
+                <p>深圳婚纱照拍摄特惠套餐-誓诺留念</p> 
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <div>
+                <img src="./images/888.jpg" alt="">
+                </div>
+                <p>深圳婚纱照拍摄特惠套餐-奢宠见证</p>  
+            </li>
+            <li>
+                <div>
+                <img src="./images/5864685_105103089000_2.jpg" alt="">
+                </div>
+                <p>深圳婚纱照拍摄特惠套餐--臻宠心意</p>  
+            </li>
+            <li>
+                <div>
+                <img src="./images/415543651088477.jpg" alt="">
+                </div>
+                <p>深圳婚纱照拍摄特惠套餐--纯爱至臻</p>  
+            </li>
+        </ul>
+        </div>
+    </div>
+    <div class="more">
+        <div class="more-1">
+        <span>Click here for more packages/details +</span>
+        <a href="">查看更多本地拍产品<img src="./images/3DC50E680B2F47AD9291A5482411E848_1521188071016.png" alt=""></a>
+    </div>
+</div>
+    <div class="seles">
+        <img src="./images/title_img2.jpg" alt="">
+        <span>特别推荐(旅游+拍摄)</span>
+    </div>
+    <div class="local">
+            <div class="local-1">
+            <ul>
+                <li>
+                    <div>
+                    <img src="./images/415440875636436.jpg" alt="">
+                    </div>
+                   <p>意大利米兰+威尼斯+维罗纳中文包车8天6晚游</p> 
+                </li>
+                <li>
+                    <div>
+                    <img src="./images/415221392851681.jpg" alt="">
+                    </div>
+                    <p>澳大利亚悉尼+墨尔本中文包车8天6晚游</p> 
+                </li>
+                <li>
+                    <div>
+                    <img src="./images/415585822911334.jpg" alt="">
+                    </div>
+                    <p>巴厘岛旅拍婚纱摄影7天5晚网红婚纱照拍摄套系</p> 
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <div>
+                    <img src="./images/415529797347053.jpg" alt="">
+                    </div>
+                    <p>广西桂林旅拍婚纱摄影4天3晚爆款套系</p>  
+                </li>
+                <li>
+                    <div>
+                    <img src="./images/u=2558184580,2865001023&fm=26&gp=0.jpg" alt="">
+                    </div>
+                    <p>法国巴黎旅拍婚纱摄影8天6晚套系</p>  
+                </li>
+                <li>
+                    <div>
+                    <img src="./images/u=1242289312,749468361&fm=11&gp=0.jpg" alt="">
+                    </div>
+                    <p>捷克布拉格+奥地利旅拍婚纱照8天6晚套系</p>  
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="hot">
+                <div class="hot-1">
+                <span>Click here for more packages/details +</span>
+                <a href="">查看更多特别推荐产品<img src="./images/3DC50E680B2F47AD9291A5482411E848_1521188071016.png" alt=""></a>
+        </div>
+    </div>
+        <div class="domestic">
+                <img src="./images/title_img4.jpg" alt="">
+                <span>全&nbsp;国&nbsp;拍</span>
+        </div>
+        <div class="local">
+                <div class="local-1">
+                <ul>
+                    <li>
+                        <div>
+                        <img src="./images/415718819509252.jpg" alt="">
+                        </div>
+                       <p>西藏拉萨市区+纳木错旅拍婚纱照1日套系</p> 
+                    </li>
+                    <li>
+                        <div>
+                        <img src="./images/415718819508791.jpg" alt="">
+                        </div>
+                        <p>西藏拉萨旅拍婚纱照1日套系</p> 
+                    </li>
+                    <li>
+                        <div>
+                        <img src="./images/415718851054325.jpg" alt="">
+                        </div>
+                        <p>西藏拉萨旅拍婚纱照1日套系</p> 
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div>
+                        <img src="./images/415718819504349.jpg" alt="">
+                        </div>
+                        <p>西藏拉萨旅拍婚纱照1日套系（2套礼服+1套便装）</p>  
+                    </li>
+                    <li>
+                        <div>
+                        <img src="./images/415529682699831.jpg" alt="">
+                        </div>
+                        <p>爆款！！！桂林旅拍婚纱照2天1晚套系</p>  
+                    </li>
+                    <li>
+                        <div>
+                        <img src="./images/415466583944859.jpg" alt="">
+                        </div>
+                        <p>广西桂林旅拍婚纱照1天套系</p>  
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <div class="package">
+                <div class="package-1">
+                <span>Click here for more packages/details +</span>
+                <a href="">查看更多全国拍产品<img src="./images/3DC50E680B2F47AD9291A5482411E848_1521188071016.png" alt=""></a>
+            </div>
+            </div>>
+            <div class="domestic">
+                <img src="./images/title_img5.jpg" alt="">
+                <span>全&nbsp;球&nbsp;拍</span>
+            </div>
+            <div class="local">
+                <div class="local-1">
+                <ul>
+                    <li>
+                        <div>
+                        <img src="./images/415676784292483.jpg" alt="">
+                        </div>
+                       <p>巴厘岛爱丽丝庄园网红打卡婚纱照1日套系</p> 
+                    </li>
+                    <li>
+                        <div>
+                        <img src="./images/415676784268922.jpg" alt="">
+                        </div>
+                        <p>巴厘岛双影像微电影婚纱照1日套系（拍摄线路三选一）</p> 
+                    </li>
+                    <li>
+                        <div>
+                        <img src="./images/415718899266052.jpg" alt="">
+                        </div>
+                        <p>日本京都+奈良两地旅拍婚纱照1天套系</p> 
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div>
+                        <img src="./images/415440849995935.jpg" alt="">
+                        </div>
+                        <p>法国巴黎旅拍婚纱照套系（6-8小时）</p>  
+                    </li>
+                    <li>
+                        <div>
+                        <img src="./images/415440853677892.jpg" alt="">
+                        </div>
+                        <p>希腊圣托里尼旅拍婚纱照套系（6-8小时，2套服装）</p>  
+                    </li>
+                    <li>
+                        <div>
+                        <img src="./images/415440852718855.jpg" alt="">
+                        </div>
+                        <p>意大利威尼斯旅拍婚纱照1天套系</p>  
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <div class="package">
+                <div class="package-1">
+                <span>Click here for more packages/details +</span>
+                <a href="">查看更多全球拍产品<img src="./images/3DC50E680B2F47AD9291A5482411E848_1521188071016.png" alt=""></a>
+            </div>
+            </div>
+            <div class="map">
+                <div class="maap">
+                <span><img class="map1" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map2" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map3" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map4" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map5" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map6" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map7" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map8" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map9" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map10" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map11" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map12" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map13" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map14" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map15" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map16" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map17" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map18" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map19" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map20" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map21" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map22" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map23" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map24" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map25" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map26" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map27" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map28" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                <span><img class="map29" src="./images/8AABFCA8678C44C888CEE8D42D984ADF_1521430166283.png" alt=""></span>
+                </div>
+            </div>
+            <table></table>
+            <div class='footer-warp'>
+                    <div class='footer'>
+                            <div class='title'>SITE MAP 站点导航</div>
+                            <div style="float:right; font-size:24px; color:#c6b5a6; margin-right:70px; margin-top:72px;">客服热线:400-886-9939</div>
+                            <div class='ctn'>
+                                <ul>
+                                    <li><a href="">WEDDING PHOTO</a></li>
+                                    <li><a href="">婚纱摄影</a></li>
+                                    <li><a href="">全球旅拍</a></li>
+                                    <li><a href="">工作室个性定制</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="">WEDDING SERVICES</a></li>
+                                    <li><a href="">婚纱策划</a></li>
+                                    <li><a href="">摄影*策划</a></li>
+                                    <li><a href="">礼服*西装</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="">ABOUT US</a></li>
+                                    <li><a href="">集团介绍</a></li>
+                                    <li><a href="">企业动态</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="">BRAND LIST</a></li>
+                                    <li><a href="">儿童摄影</a></li>
+                                    <li><a href="">8090婚礼一站式</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a id='mendian' href="">旗下门店</a></li>
+                                    <li><a id='mendian' href="">在线支付</a></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class='footer-ba-warp'>
+                        <div class='footer-ba'>
+                        <a href="#"><img src="images/brand_03.png" alt=""></a>
+                        <p>总部地址：罗湖区泥岗路大华大厦701、702、730</p>
+                        <p>Copyright © 2006 - 2019 Szforever Inc. All Rights Reserved</p>
+                        <p>深圳市天长地久文化产业股份有限公司版权所有|站点备案信息： [粤ICP备09017461号]</p>
+                        <p>样片与客片版权归深圳市天长地久文化产业股份有限公司所有，未经允许不得转载抄袭，我司对此保留法律诉讼的权利。</p>
+                        </div>
+                </div>
+
+        <script>
+        window.onscroll = function(){ //绑定scroll事件
+        var t = document.documentElement.scrollTop || document.body.scrollTop; 
+        // console.log(t);//获取滚动距离
+        var top_div = document.getElementsByClassName( "maap" )[0]; 
+        // console.log(top_div);
+        //查询并定义div元素
+        var i=0;
+        var isMove = true;
+        if( t >= 5700 && isMove) { //判断
+        // console.log(t);
+        var top=setInterval(function(){
+            isMove = false;
+            top_div.style.height = ++i + "px";
+            console.log(top_div);
+            console.log(top);
+            if(i>=397){
+            // top_div.style.top="-23px";
+                //top_div.style.display = "inline";
+                clearInterval(top);
+                isMove= true;
+            }
+            // else {
+            // top_div.style.display = "none";
+            // }
+            },8)
+          }
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+#phone{
+	font-size: 26px;
+	padding-left:50px;
+	margin:15px 0;
+	cursor:pointer;
+	color:#f00;
+	}
+#menu{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    border-top:3px solid red;
+}
+#menu>.nav{
+    width:76%;
+    list-style:none;
+}
+.nav li{
+    height:146px;
+}
+.nav li a{
+    text-decoration:none;
+    color:#212529;
+    font-size:18px;
+    padding:0 40px;
+    line-height:140px;
+}
+.nav li:not(:nth-child(5)):hover{
+    background-color:#ff6f61;
+    color:#fff;
+}
+#menu>#logo{
+    list-style:none;
+}
+.family{
+    width:100%;
+    height:200px;
+    background: url("../images/titbg02.jpg")
+}
+.family1 h1{
+    text-align: center;
+    color:rgb(221, 217, 217);
+    padding-top:60px;
+}
+.family1 p{
+    text-align: center;
+}
+.family-photo{
+    margin-top: 20px;
+    width:100%;
+}
+.family-photo-1{
+    width:80%;
+    margin:0 auto;
+}
+.family-photo-1 ul{
+    display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+    list-style: none;
+    padding:0;
+}
+.family-photo-1 ul li{
+    position: relative;
+    width:496px;
+    height:310px;
+    border:1px solid #cccccc;
+    cursor:pointer;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.family-photo-1 ul li img{
+    width:496px;
+    height:310px;
+    Transition-duration:1s;
+    Transition-timing-function:linear;
+}
+.family-photo-1 ul li div{
+    position: absolute;
+    width:80%;
+    height:80%;
+    left:10%;
+    top:10%;
+    transition: all 1s;
+    transform: scale(0,1);
+    color:#fff;
+    /* 蒙版第三步:防止透明度影响: */
+    /* 蒙版的opacity导致透明度收到影响,设置z-index让这个元素浮起来,避开opacity的影响 */
+    z-index: 1000;
+}
+.family-photo-1 ul li div h2{
+    margin-top:30%;
+    text-align: center;
+    transition: all 0.5s linear;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translate3d(180deg,360deg,180deg);
+} 
+.family-photo-1 ul li div p{
+    text-align: center;
+    padding-top: 10px;
+}
+.family-photo-1 ul li:hover h2{
+    opacity: 1;
+    transform: translate3d(360deg,360deg,180deg);
+} 
+.family-photo-1 ul li:hover div{
+    transform: scale(1,1);
+} 
+.family-photo-1 ul li img{
+    transition: all 1s ease-in-out;
+} 
+/* 蒙版的制作:第三步在上面 */
+/*蒙版必备2: 必须给img图片设置透明的(必须是opacity)和filter */
+.family-photo-1 ul li:hover img{
+    opacity: 0.6;
+    filter:alpha(opacity=60);
+}
+/*蒙版必备1: 给父元素设置背景色 */
+.dimback{
+    background:#000;
+}
+.footer-warp{
+    width: 100%;
+    overflow: hidden;
+    background-color: #302d2c;
+}
+.footer-warp>.footer{
+    padding: 60px 80px 50px 80px;
+    overflow: hidden;
+    position: relative;
+    min-width: 1800px;
+}
+.footer>.title{
+    color: #c6b5a6;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+.ctn ul{
+    display: block;
+    float: left;
+    overflow: hidden;
+    width: 180px;
+    margin-right: 20px;
+}
+.ctn ul li{
+    display: block;
+    margin: 10px 0;
+    padding: 7px 0;
+    border-bottom: 1px solid #423e3b;
+    font-weight: normal;
+}
+.ctn ul li a{
+    text-decoration:none;
+    color:#c6b5a6;
+}
+#mendian{
+    display: inline-block;
+    font-size:17px;
+    color:#fff;
+    padding:23px 35px;
+    border-radius:20px;
+    background-color: #fe0000;
+    margin-top:-8px;
+    margin-left:2px;
+}
+#mendian:hover{
+    background-color:#FF6F61;
+}
+.footer-ba-warp{
+    width:100%;
+    background-color:#2b2827;
+    overflow: hidden;
+    font-size: 12px;
+    color: #c6b5a6;
+}
+.footer-ba{
+    padding: 30px 80px 60px;
+    font-weight: normal;
+}
+.footer-ba a{
+    margin-top:15px;
+    display:block;
+    margin-bottom:15px;
+}
